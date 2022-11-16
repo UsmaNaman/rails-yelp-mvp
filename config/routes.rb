@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   resources :restaurants do
-    resources :reviews, only: %i[index new create]
+    resources :reviews, only: %i[index new create show]
   end
-  resources :reviews, only: [:show]
+  resources :reviews, only: %i[show create]
 end
 
 # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

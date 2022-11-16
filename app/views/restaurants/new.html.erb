@@ -1,15 +1,16 @@
-<h1>Add a new restaurant</h1>
-
-<%= simple_form_for @restaurant do |f| %>
-  <%= f.input :name, placeholder: "Write the restaurant name here..." %>
-  <%= f.input :address, placeholder: "Write the restaurant name here..." %>
-  <%= f.input :phone_number, placeholder: "Write the phone number here..." %>
-  <%= f.input :category, placeholder: "Write the category here (out of 'chinese', 'italian', japanese, 'french' and 'belgian')" %>
-  <%= f.submit "Add Restaurant", class: "btn btn-primary" %>
-<% end %>
-
-<br>
-
-<div>
-  <%= link_to "Back to restaurants", restaurants_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+      <h1>Add a new restaurant</h1>
+        <%= simple_form_for @restaurant do |f| %>
+          <%= f.input :name, placeholder: "Write the restaurant name here..." %>
+          <%= f.input :address, placeholder: "Write the restaurant name here..." %>
+          <%= f.input :phone_number, placeholder: "Write the phone number here..." %>
+          <%= f.input :category, placeholder: "Write the category here (out of 'chinese', 'italian', japanese, 'french' and 'belgian')" %>
+          <%= f.submit "Add Restaurant", class: "btn btn-primary" %>
+          <% end %>
+          <br>
+        <%= link_to "Back to restaurants", restaurants_path %>
+    </div>
+  </div>
 </div>
